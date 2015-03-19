@@ -35,7 +35,7 @@ endian="<" # little, ">" for big
 page_size = int(os.sysconf("SC_PAGE_SIZE")) & 0x7FFFFFFFFFFFFF
 
 # ALLOCATING MEMORY
-buf_size = 512
+buf_size = page_size
 if len(sys.argv) >= 2:
   print("Reading length from command line\n")
   buf_size = int(sys.argv[1])
