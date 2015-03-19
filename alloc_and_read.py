@@ -14,7 +14,7 @@ def read_entry(path, offset, size=8):
 def get_pagemap_entry(pid, addr):
   maps_path = "/proc/{0}/pagemap".format(pid)
   if not os.path.isfile(maps_path):
-    print "Process {0} doesn't exist.".format(pid)
+    print("Process {0} doesn't exist.".format(pid))
     return
   page_size = os.sysconf("SC_PAGE_SIZE")
   pagemap_entry_size = 8
